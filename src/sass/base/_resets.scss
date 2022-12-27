@@ -1,0 +1,56 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: variables.$fuente;
+    color: variables.$b;
+}
+
+body {
+    @include mixins.contenedor();
+    background:  linear-gradient(11deg, rgba(0,0,0,1) 44%, rgba(51,100,102,1) 89%);
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-size: 25px;
+}
+
+@for $i from 0 through 3 {
+    h#{$i + 1} {
+        font-size: 150px - ($i*40);
+    }
+}
+
+.italic { font-weight: 700; }
+
+@include mixins.laptopXL(){
+    body {
+        text-align: center;
+        height: auto;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 5px;
+
+        .redes a{
+            font-weight: 700;
+            margin: 15px 25px 0 0;
+        }
+
+        h4 {
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+    }
+
+    main {
+        margin-top: 70px;
+        flex-direction: column;
+    }
+};

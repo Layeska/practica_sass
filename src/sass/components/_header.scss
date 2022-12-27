@@ -1,0 +1,22 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+header {
+    @include mixins.flexbox(space-between, center);
+    margin-top: 35px;
+
+    h4 { font-weight: 400; }
+
+    nav {
+        display: flex;
+        gap: 25px;
+
+        a:hover { color: variables.$a; }
+    }
+
+    .redes {
+        a { @include mixins.flexbox(unset,center); }
+
+        img { width: 40px; }
+    }
+}

@@ -1,0 +1,16 @@
+@mixin contenedor() {
+    max-width: 1250px;
+    margin: auto auto;
+}
+
+@mixin flexbox($medidaJS: unset, $medidaAI: unset) {
+    display: flex;
+    justify-content: $medidaJS;
+    align-items: $medidaAI;
+}
+
+@mixin laptopXL(){
+    @media (max-width: 1200px) {
+        @content
+    }
+}

@@ -1,0 +1,15 @@
+@use "../abstract/mixins";
+
+main {
+    @include mixins.flexbox(space-between, center);
+    margin-top: 90px;
+
+    h3 { font-weight: 400;}
+
+    h4 { width: 450;}
+
+    img {
+        width: 500px;
+        margin-right: 55px;
+    }
+}
